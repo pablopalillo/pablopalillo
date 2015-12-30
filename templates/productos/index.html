@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/styles.css" charset="utf-8">
+    <title>Productos</title>
+  </head>
+  <body>
+    <h1>Productos</h1>
+
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>imagen</th>
+      </tr>
+
+        {% for producto in object_list %}
+        <tr>
+          <td>{{producto.nombre}}</td>
+          <td>{{producto.descripcion}}</td>
+          <td>{{producto.precio}}</td>
+          <td><img src="{{BASE_DIR}}/{{producto.imagen}}" alt="" /></td>
+        </tr>
+        {% endfor%}
+
+    </table>
+
+
+  </body>
+</html>

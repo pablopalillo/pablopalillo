@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+
+{% block title%}
+Inicio
+{% endblock %}
+
+{% block content %}
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure</p>
+<p>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+</div>
+{% endblock %}
+
+{% block aside %}
+<div id="banner">
+  <div class="banner1">
+    Soy un banner
+  </div>
+</div>
+
+<div id="login">
+  {% if not user.is_authenticated %}
+    <form method="post">{% csrf_token %}
+      <div class="user">
+        <label for="user">Username</label>
+        <input type="text" name="username" value="" placeholder="Username">
+      </div>
+      <div class="pass">
+        <label for="pass">Password</label>
+        <input type="password" name="password" value="" placeholder="password">
+      </div>
+      <div class="sub">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  {% else %}
+    <div class="welcome">
+      <span> Bienvenido {{ user.username|capfirst }} </span>
+      <span> <a href="/cerrar/">Cerrar</a></span>
+    </div>
+  {% endif %}
+</div>
+{% endblock%}

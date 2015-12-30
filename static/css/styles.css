@@ -1,0 +1,41 @@
+body
+{
+  background-color: black;
+  color: green;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+h1
+{
+  background-size: 43px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  margin-left: auto;
+}
+
+table
+{
+  border: none;
+}
+
+table tr
+{
+  width: 100px;
+}
+
+table tr th
+{
+  background-color: green;
+  color: white;
+  font-family: Verdana;
+  font-size: 12px;
+  border : 1px solid white;
+}
+
+table tr td
+{
+  boder: 1px solid white;
+  font-size:  12px;
+  font-family: Verdana;
+}
