@@ -35,15 +35,15 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'apps.general',
-    'apps.productos',
+    'django.contrib.staticfiles'
 )
+
 
 from django.core.urlresolvers import reverse_lazy
 LOGIN_URL           = reverse_lazy('login')
 LOGIN_REDIRECT_URL  = reverse_lazy('login')
 LOGOUT_URL          = reverse_lazy('logout')
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -63,9 +63,18 @@ WSGI_APPLICATION = 'pablopalillo.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'prueba.db'),
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'prueba.db'),
+#    }
+
+  'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pablopalillo',
+        'USER': 'root',
+        'PASSWORD': 'mysql',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 

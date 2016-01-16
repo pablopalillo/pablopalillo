@@ -9,15 +9,16 @@ urlpatterns = patterns('',
     # url(r'^$', 'pablopalillo.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls))
 
     #general
-    url(r'^', include('apps.general.urls')),
+#    url(r'^', include('apps.general.urls')),
 
     #Images
-    url(r'^image/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root' : settings.BASE_DIR+'/image/',} ),
+#    url(r'^image/(?P<path>.*)$', 'django.views.static.serve',
+#        {'document_root' : settings.BASE_DIR+'/image/',} ),
 
     #productos
-    url(r'^productos/', include('apps.productos.urls')),
+#    url(r'^productos/', include('apps.productos.urls')),
+
 )
