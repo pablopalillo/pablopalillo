@@ -1,4 +1,4 @@
-
+/** ------------- MENU PRINCIPAL ---------------- **/
 .menu-principal #main-menu , .menu-principal #main-menu .top-bar-right ul
 {
   background: #0A0A0A none repeat scroll 0% 0%;
@@ -15,4 +15,30 @@
 .menu-principal #main-menu .top-bar-right ul li a:hover
 {
   color: #57C34C;
+}
+
+
+/** ARTICULOS GENERICOS **/
+
+#single-article
+{
+  margin: 5em 0em 10em 0em;
+
+}
+
+#single-article header .article-title, article header h1
+{
+  font-size: 4em;
+  text-align: center;
+  color: #36B329;
+}
+
+#single-article section
+{
+  margin-top: 50px;
+}
+
+#single-article section , #single-article p
+{
+  text-align: justify;
 }

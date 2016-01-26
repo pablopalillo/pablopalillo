@@ -26,10 +26,10 @@
 
           <div class="top-bar" id="main-menu">
             <div class="top-bar-right medium-7 columns">
-              <ul class="menu small-11 columns medium-11 columns">
-                  <li class="small-12 columns medium-4 columns"><a href="#">Servicios</a></li>
-                  <li class="small-12 columns medium-4 columns"><a href="#">Quienes Somos</a></li>
-                  <li class="small-12 columns medium-4 columns"><a href="#">Contactenos</a></li>
+              <ul class="menu small-11 medium-11 columns">
+                  <li class="small-12 medium-4 columns"><a href="#">Servicios</a></li>
+                  <li class="small-12 medium-4 columns"><a href="#">Quienes Somos</a></li>
+                  <li class="small-12 medium-4 columns"><a href="#">Contactenos</a></li>
               </ul>
             </div>
           </div>
@@ -37,9 +37,16 @@
 
   </div>
 
-    <div class="expanded row">
-      <article class="large-12 columns content">
-        {% block content %}{% endblock %}
+    <div id="single-article" class="expanded row">
+      <article class="large-8 large-centered medium-8 medium-centered columns content">
+        <header>
+          <h1 class="article-title">{% block content-title %}{% endblock %} </h1>
+          <h3 class="subheader">{% block content-subtitle %}{% endblock %} </h3>
+        </header>
+        <section>
+            {% block content %}{% endblock %}
+        </section>
+
       </article>
     </div>
 
