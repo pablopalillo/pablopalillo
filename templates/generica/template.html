@@ -5,29 +5,45 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Metadata -->
-    <% block meta %><% endblock %>
-    <title>PabloPalillo | <% block titulo %> <% endblock %> </title>
+    {% block meta %}{% endblock %}
+    <title>PabloPalillo | {% block titulo %} {% endblock %} </title>
     <link rel="stylesheet" href="{{STATIC_URL}}css/app.css" charset="utf-8">
     <link rel="stylesheet" href="{{STATIC_URL}}css/foundation.min.css" charset="utf-8">
   </head>
 
   <body>
-    <div class="row">
-      <div class="menu align-right large-12 columns">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </div>
-    </div>
+    <div class="expanded row">
+      <div class="menu-principal">
 
-    <div class="row">
+          <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">
+              <div class="pablopalillo-logo">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="top-bar" id="main-menu">
+            <div class="top-bar-right medium-7 columns">
+              <ul class="menu small-11 columns medium-11 columns">
+                  <li class="small-12 columns medium-4 columns"><a href="#">Servicios</a></li>
+                  <li class="small-12 columns medium-4 columns"><a href="#">Quienes Somos</a></li>
+                  <li class="small-12 columns medium-4 columns"><a href="#">Contactenos</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+    <div class="expanded row">
       <article class="large-12 columns content">
-        <% block content %><% endblock %>
+        {% block content %}{% endblock %}
       </article>
     </div>
 
-    <footer class="row">
+    <footer class="expanded row">
 
       <div class="large-3 columns">
         <h3>Enlaces de interes</h3>

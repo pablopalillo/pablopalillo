@@ -9,7 +9,9 @@ urlpatterns = patterns('',
     # url(r'^$', 'pablopalillo.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls))
+    url(r'^admin/', include(admin.site.urls)),
+    #articulo
+    url(r'^articulo/', include('apps.articulo.urls'))
 
     #general
 #    url(r'^', include('apps.general.urls')),

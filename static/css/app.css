@@ -1,0 +1,18 @@
+
+.menu-principal #main-menu , .menu-principal #main-menu .top-bar-right ul
+{
+  background: #0A0A0A none repeat scroll 0% 0%;
+
+}
+
+.menu-principal #main-menu , .menu-principal #main-menu .top-bar-right ul li a
+{
+  text-align: center;
+  color: #FEFEFE;
+  font-weight: bold;
+}
+
+.menu-principal #main-menu .top-bar-right ul li a:hover
+{
+  color: #57C34C;
+}
