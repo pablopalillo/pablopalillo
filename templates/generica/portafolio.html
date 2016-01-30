@@ -38,17 +38,41 @@
   </div>
 
     <div id="single-article" class="expanded row">
-      <article class="large-8 large-centered medium-8 medium-centered columns content">
+      <article class="small-12 medium-11 medium-centered large-11 large-centered columns content">
         <header>
           <h1 class="article-title">{% block content-title %}{% endblock %} </h1>
-          <h3 class="subheader">{% block content-subtitle %}{% endblock %} </h3>
         </header>
         <section>
+            <div class="column row banner">
+
+              <div class="orbit" role="region" aria-label="PabloPalillo Perfil" data-orbit data-use-m-u-i="false">
+                <ul class="orbit-container">
+                  <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Siguiente </span>&#9664;</button>
+                  <button class="orbit-next" aria-label="next"><span class="show-for-sr">Anterior</span>&#9654;</button>
+                  {% block banner %}{% endblock %}
+                </ul>
+
+                <nav class="orbit-bullets">
+                 <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                 <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                 <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                 <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+               </nav>
+
+              </div>
+
+            </div>
+
+        </section>
+        <section>
+          <div class="column row portafolio">
             {% block content %}{% endblock %}
+          </div>
         </section>
 
       </article>
     </div>
+
 
     <footer class="expanded row">
       <div class="small-12 large-12 medium-12 columns">

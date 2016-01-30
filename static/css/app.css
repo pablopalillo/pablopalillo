@@ -98,6 +98,12 @@ footer > div
   margin-top: 3em;
 }
 
+footer h5
+{
+  margin-bottom: 20px;
+  margin-top:  10px;
+}
+
 .footer-content
 {
     border-right: 1px solid rgba(255, 255, 255, 0.39);
@@ -194,6 +200,10 @@ footer > div
 
     /** ---- footer ----- **/
 
+    footer h5
+    {
+      margin-bottom: 10px;
+    }
     .footer-content .info .mail
     {
       font-size: 10px;
