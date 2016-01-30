@@ -7,12 +7,12 @@ ul > li
     list-style: outside none none;
 }
 
-ul > li a
+ul > li a , .mail a
 {
     color: #36B329;
 }
 
-ul > li a:hover
+ul > li a:hover , .mail a:hover
 {
     color: #57c34c;
 }
@@ -98,11 +98,71 @@ footer > div
   margin-top: 3em;
 }
 
-.footer-content {
+.footer-content
+{
     border-right: 1px solid rgba(255, 255, 255, 0.39);
     min-height: 5em;
 }
 
+.footer-content .info
+{
+  max-width: 250px;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.footer-content .info div:first-child
+{
+  margin-bottom: 10px;
+}
+
+
+.footer-content .info .ubc
+{
+  background-image: url("../img/icons/pin80-white.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+}
+
+.footer-content .info .mail-icon
+{
+  background-image: url("../img/icons/arroba-white.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+}
+
+.links li
+{
+  margin-bottom: 5px;
+}
+
+.redes li a
+{
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin-left: 5px;
+}
+
+.redes .icon-tw a
+{
+    background-image: url("../img/icons/twitter-white.png");
+}
+
+.redes .icon-fb a
+{
+    background-image: url("../img/icons/socialmedia18-white.png");
+}
+
+.redes .icon-gh a
+{
+    background-image: url("../img/icons/cat6-white.png");
+}
 
 /** Mobiles **/
 @media only screen and (max-width: 600px)
@@ -130,6 +190,13 @@ footer > div
       background-color: #57C34C;
       color: #D6F9D2;
 
+    }
+
+    /** ---- footer ----- **/
+
+    .footer-content .info .mail
+    {
+      font-size: 10px;
     }
 
 }
