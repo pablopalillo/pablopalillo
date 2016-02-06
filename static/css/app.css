@@ -80,6 +80,21 @@ ul > li a:hover , .mail a:hover
   text-align: justify;
 }
 
+
+/**-- PORTAFOLIO **/
+
+.banner
+{
+  margin-bottom: 5em;
+}
+
+.banner .banner-item > img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 100%;
+}
+
 /** footer **/
 
 footer
