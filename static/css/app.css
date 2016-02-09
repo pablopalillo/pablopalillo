@@ -54,6 +54,42 @@ ul > li a:hover , .mail a:hover
 {
   color:  #FEFEFE;
 }
+/** -- HOME --**/
+
+
+#home .home-item
+{
+  padding-top: 10em;
+  background: #15151d url("../img/fondo.jpg") no-repeat scroll 0 0 / cover ;
+  height: 100%;
+}
+
+
+#home .home-item h1
+{
+  font-family: 'Arvo', serif !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 4em;
+  text-align: center;
+  color: #CCDACB;
+}
+
+#home .home-item h2
+{
+  font-family: 'Arvo', serif !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #CCDACB;
+}
+
+#home .home-item p
+{
+  font-size: 22px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #CCDACB;
+}
+
 
 
 /** ARTICULOS GENERICOS **/
@@ -64,7 +100,7 @@ ul > li a:hover , .mail a:hover
 
 }
 
-#single-article header .article-title, article header h1
+#single-article header .article-title
 {
   font-family: 'Arvo', serif !important;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -219,7 +255,7 @@ footer h5
       margin: 40px 0em 5em 0em;
     }
 
-    #single-article header .article-title, article header h1
+    #single-article header .article-title
     {
 
       width: 100%;

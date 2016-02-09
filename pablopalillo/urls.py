@@ -13,8 +13,8 @@ urlpatterns = patterns('',
     #articulo
     url(r'^articulo/', include('apps.articulo.urls')),
 
-    #articulo
-    url(r'^$', 'main.views.index')
+    #home-main
+    url(r'^$', include('apps.main.urls'))
 
     #general
 #    url(r'^', include('apps.general.urls')),
