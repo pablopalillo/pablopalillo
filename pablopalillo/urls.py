@@ -11,7 +11,10 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     #articulo
-    url(r'^articulo/', include('apps.articulo.urls'))
+    url(r'^articulo/', include('apps.articulo.urls')),
+
+    #articulo
+    url(r'^$', 'main.views.index')
 
     #general
 #    url(r'^', include('apps.general.urls')),

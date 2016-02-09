@@ -36,6 +36,7 @@ ul > li a:hover , .mail a:hover
   text-align: center;
   color: #FEFEFE;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .menu-principal #main-menu .top-bar-right ul li a:hover
@@ -65,6 +66,8 @@ ul > li a:hover , .mail a:hover
 
 #single-article header .article-title, article header h1
 {
+  font-family: 'Arvo', serif !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   font-size: 4em;
   text-align: center;
   color: #36B329;
@@ -85,7 +88,7 @@ ul > li a:hover , .mail a:hover
 
 .banner
 {
-  margin-bottom: 5em;
+  margin-bottom: 7em;
 }
 
 .banner .banner-item > img {
@@ -94,6 +97,22 @@ ul > li a:hover , .mail a:hover
     vertical-align: middle;
     width: 100%;
 }
+
+.portafolio article
+{
+  margin: 1em 0 2em;
+}
+
+.portafolio-item-content {
+    min-height: 250px;
+}
+
+.portafolio-item .details
+{
+  margin-top : 0px !important;
+}
+
+
 
 /** footer **/
 

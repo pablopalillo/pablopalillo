@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+class index():
+    template_name = "articulo/index-perfil.html"
