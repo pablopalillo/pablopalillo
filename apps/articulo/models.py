@@ -7,9 +7,14 @@ class Arcticulo(models.Model):
     slug = models.CharField(max_length=300, blank=True)
     tipo = models.ForeignKey('TipoArticulo', db_column='tipo')
     estado = models.ForeignKey('EstadoArticulo', db_column='estado')
+
+    def __unicode__(self):
+        return self.nombre
+        
     class Meta:
-        managed = False
         db_table = 'arcticulo'
+
+
 
 class EstadoArticulo(models.Model):
     id_estado = models.IntegerField(primary_key=True)
