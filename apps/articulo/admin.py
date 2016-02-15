@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Arcticulo, EstadoArticulo, TipoArticulo
+from .models import Articulo
 
 class ArcticuloAdmin(admin.ModelAdmin):
+    class Media:
+        js = ('/static/js/vendor/tinymce/tinymce.min.js','/static/js/admin.js')
 
-    list_display = ('question_text', 'pub_date')
 
-
-admin.site.register(Arcticulo)
+admin.site.register(Articulo, ArcticuloAdmin)
