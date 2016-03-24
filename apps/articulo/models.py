@@ -11,6 +11,17 @@ class Articulo(models.Model):
     def __unicode__(self):
         return self.nombre
 
+    """
+     Sobreescribir el delete, por que en mi caso es un borrado logico.
+    """
+    def delete (self, *args, **kwargs):
+
+        Articulo.objects.filter(id_articulo = self.id_articulo).update(estado = "3")
+
+        """newArticulo = Articulo.objects.get(pk = self.id_articulo)
+        newArticulo.estado.id_estado = "3"
+        newArticulo.save(*args, **kwargs) """
+
     class Meta:
         db_table = 'articulo'
 
