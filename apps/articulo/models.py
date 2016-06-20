@@ -1,10 +1,11 @@
 from django.db import models
+from django.db.models.signals import pre_save
 
 class Articulo(models.Model):
     id_articulo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=300, blank=True)
     contenido = models.TextField(blank=True)
-    slug = models.CharField(max_length=300, blank=True)
+    slug = models.SlugField(unique=True)
     tipo = models.ForeignKey('TipoArticulo', db_column='tipo')
     estado = models.ForeignKey('EstadoArticulo', db_column='estado')
 
@@ -17,10 +18,7 @@ class Articulo(models.Model):
     def delete (self, *args, **kwargs):
 
         Articulo.objects.filter(id_articulo = self.id_articulo).update(estado = "3")
-
-        """newArticulo = Articulo.objects.get(pk = self.id_articulo)
-        newArticulo.estado.id_estado = "3"
-        newArticulo.save(*args, **kwargs) """
+        Meta.objects.filter(id_articulo = self.id_articulo).delete()
 
     class Meta:
         db_table = 'articulo'
@@ -39,7 +37,7 @@ class EstadoArticulo(models.Model):
         db_table = 'estado_articulo'
 
 class Meta(models.Model):
-    id_meta = models.IntegerField(primary_key=True)
+    id_meta = models.AutoField(primary_key=True)
     id_articulo = models.ForeignKey(Articulo, db_column='id_articulo')
     metatype = models.CharField(max_length=35, blank=True)
     metadata = models.CharField(max_length=300, blank=True)

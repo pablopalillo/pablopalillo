@@ -1,13 +1,23 @@
 from django.contrib import admin
 from .models import Articulo
+from .models import Meta
 
 # Globally disable delete selected
 admin.site.disable_action('delete_selected')
-
+###
+# TabularInline
+# Permite generar un formulario con varios modelos relacionados,
+###
+class InlineAdmin(admin.TabularInline):
+    model = Meta
+    list_display    = ['metatype','metadata']
 
 class ArcticuloAdmin(admin.ModelAdmin):
-
+    inlines = [
+        InlineAdmin,
+    ]
     list_display    = ['nombre','estado']
+    prepopulated_fields = {"slug": ("nombre",)}
 
     class Media:
         js = ('/static/js/vendor/tinymce/tinymce.min.js','/static/js/admin.js')
@@ -19,7 +29,6 @@ class ArcticuloAdmin(admin.ModelAdmin):
     """
 
     def get_queryset(self, request):
-
         qs = super(ArcticuloAdmin, self).get_queryset(request)
 
         return qs.exclude(estado = 3)
@@ -34,12 +43,18 @@ class ArcticuloAdmin(admin.ModelAdmin):
     """
 
     def actionCustomDelete(modeladmin, request, queryset):
+        art = request.POST['_selected_action']
 
+        Meta.objects.filter(id_articulo = art).delete()
         queryset.update(estado='3')
 
     actionCustomDelete.short_description = "Eliminar dato(s) seleccionados."
     actions         = ['actionCustomDelete']
 
+class MetaAdmin(admin.ModelAdmin):
+    inlines = [
+        InlineAdmin,
+    ]
 
 
 
