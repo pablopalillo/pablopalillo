@@ -24,7 +24,6 @@ class Articulo(models.Model):
         db_table = 'articulo'
 
 
-
 class EstadoArticulo(models.Model):
     id_estado = models.IntegerField(primary_key=True)
     estado = models.CharField(max_length=40)

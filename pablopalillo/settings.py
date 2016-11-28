@@ -108,4 +108,5 @@ STATIC_URL = '/static/'
 # Falta esto para los (css , JavaScript, images)
 STATICFILES_DIRS = (
     '/var/www/pablopalillo/static/',
+    '/var/www/pablopalillo/image/',
 )
