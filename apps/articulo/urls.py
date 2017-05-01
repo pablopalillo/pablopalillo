@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = patterns('',
     url(r'^$', views.getArticle ),
-    url(r'^(?P<article_id>\d{4})/$', views.getArticle),
+    url(r'^(?P<slug>[\w-]+)/$', views.getArticle),
     #url(r'^inicio2$', 'apps.general.views.indexSimple'),
     #url(r'^inicio/$', index2.as_view() ),
 #    url(r'^$', 'django.contrib.auth.views.login', {'template_name':'general/index.html'}, name='login'),

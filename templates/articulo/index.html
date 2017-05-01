@@ -1,10 +1,9 @@
-{% extends "generica/template.html" %}
+{% extends "layouts/template.html" %}
 
-{% block titulo %} Articulo {% endblock %}
+{% block titulo %} {{ article.nombre }} {% endblock %}
 
-{% block content-title %}Articulo Prueba{% endblock %}
-{% block content-subtitle %}Es opcional{% endblock %}
+{% block content-title %} {{ article.nombre }} {% endblock %}
 
 {% block content %}
-  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  {{ article.contenido|safe }}
 {% endblock %}

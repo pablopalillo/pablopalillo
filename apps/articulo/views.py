@@ -1,12 +1,27 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.http import HttpResponse
+from django.http import Http404
 from .models import Articulo
 
-def getArticle(request, article_id):
-    idArticle = 12
-    print article_id
-    return HttpResponse("Hola mama , hola hola", article_id)
+def getArticle(request, slug):
+
+    if( slug is None ):
+        raise Http404("Articulo no valido")
+    else :
+
+        try:
+            article = Articulo.objects.get(slug=slug)
+
+            if article.estado.id_estado != 1 :
+                raise Http404("Error 404, Articulo no encontrado")
+            else:
+                return render(request, "articulo/index.html",{"article":article, 'foo':'bar'})
+
+        except Articulo.DoesNotExist:
+            raise Http404("Error 404, Articulo no encontrado")
+
+
 
 class index(TemplateView):
 
