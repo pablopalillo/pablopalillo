@@ -17,13 +17,32 @@ def getArticle(request, slug):
             if article.estado.id_estado != 1 :
                 raise Http404("Error 404, Articulo no encontrado")
             else:
-                metaArticle = Meta.objects.filter(id_articulo = article.id_articulo)
-                print(metaArticle)
+                metaArticle = getMetaData(article.id_articulo)
 
-                return render(request, "articulo/index.html",{"article":article, 'foo':'bar'})
+                return render(request, "articulo/index.html",
+                    {"article":article, 'meta':metaArticle}
+                )
 
         except Articulo.DoesNotExist:
             raise Http404("Error 404, Articulo no encontrado")
+
+
+def getMetaData(idPost):
+
+    metaHtml = ''
+
+    if( not idPost is None ):
+        metaArticle = Meta.objects.filter(id_articulo = idPost)
+
+        for itemMeta in metaArticle:
+            metaText = ('<meta name="{name}" content="{content}" />').format(
+            name = itemMeta.metatype,
+            content = itemMeta.metadata
+            )
+            metaHtml = metaHtml+" "+metaText
+
+    return metaHtml
+
 
 
 
