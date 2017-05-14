@@ -104,9 +104,12 @@ USE_TZ = True
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = '/var/www/pablopalillo/media'
+MEDIA_URL = '/media/'
+
 
 # Falta esto para los (css , JavaScript, images)
 STATICFILES_DIRS = (
     '/var/www/pablopalillo/static/',
-    '/var/www/pablopalillo/image/',
+    '/var/www/pablopalillo/media/',
 )
