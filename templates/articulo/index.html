@@ -1,5 +1,5 @@
 {% extends "layouts/template.html" %}
-
+{% block meta %} {{ meta|safe }} {% endblock %}
 {% block titulo %} {{ article.nombre }} {% endblock %}
 
 {% block content-title %} {{ article.nombre }} {% endblock %}

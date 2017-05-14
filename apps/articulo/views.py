@@ -37,7 +37,7 @@ def getMetaData(idPost):
         for itemMeta in metaArticle:
             metaText = ('<meta name="{name}" content="{content}" />').format(
             name = itemMeta.metatype,
-            content = itemMeta.metadata
+            content = itemMeta.metadata.encode('utf8')
             )
             metaHtml = metaHtml+" "+metaText
 
