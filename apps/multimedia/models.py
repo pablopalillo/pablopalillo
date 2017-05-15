@@ -6,7 +6,7 @@ class Multimedia(models.Model):
     tipo = models.ForeignKey('TipoMultimedia', db_column='tipo')
     titulo = models.CharField(max_length=80, blank=True)
     descripcion = models.TextField(blank=True)
-    url = models.ImageField(upload_to= "images/",max_length=1000, blank=True)
+    url = models.ImageField(upload_to="image/multimedia",max_length=1000, blank=True)
     estado = models.CharField(max_length=1, blank=True)
 
     def __unicode__(self):

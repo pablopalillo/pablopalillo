@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Articulo
 from .models import Meta
-from apps.multimedia.models import Articuloxmultimedia
-from pprint import pprint
 
 # Globally disable delete selected
 admin.site.disable_action('delete_selected')
@@ -10,20 +8,13 @@ admin.site.disable_action('delete_selected')
 # TabularInline
 # Permite generar un formulario con varios modelos relacionados,
 ###
-class MultimediaInlineAdmin(admin.TabularInline):
-    model = Articuloxmultimedia
-
-    #readonly_fields = ('classifier', 'err_count')
-    extra = 0
-
-class MetaInlineAdmin(admin.TabularInline):
+class InlineAdmin(admin.TabularInline):
     model = Meta
     list_display    = ['metatype','metadata']
 
 class ArcticuloAdmin(admin.ModelAdmin):
     inlines = [
-        MultimediaInlineAdmin,
-        MetaInlineAdmin
+        InlineAdmin,
     ]
     list_display    = ['nombre','estado']
     prepopulated_fields = {"slug": ("nombre",)}
@@ -62,7 +53,7 @@ class ArcticuloAdmin(admin.ModelAdmin):
 
 class MetaAdmin(admin.ModelAdmin):
     inlines = [
-        MetaInlineAdmin,
+        InlineAdmin,
     ]
 
 
