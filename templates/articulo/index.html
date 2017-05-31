@@ -6,4 +6,26 @@
 
 {% block content %}
   {{ article.contenido|safe }}
+
+  <figure class="article-gallery">
+    <div class="orbit" role="region" aria-label="PabloPalillo Perfil" data-orbit data-use-m-u-i="false">
+      <ul class="orbit-container">
+        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Siguiente </span>&#9664;</button>
+        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Anterior</span>&#9654;</button>
+
+        <li class="is-active orbit-slide">
+          <div class="banner-item">
+            <img src="{{STATIC_URL}}/img/banner.jpg" alt="planet" />
+            <figcaption class="orbit-caption">Somos Globales</figcaption>
+          </div>
+        </li>
+        <li class="orbit-slide">
+          <div class="banner-item">
+            <img src="{{STATIC_URL}}/img/banner2.jpg" alt="planet" />
+            <figcaption class="orbit-caption">Code y Coffee</figcaption>
+          </div>
+        </li>
+      </ul>
+  </figure>
+
 {% endblock %}
