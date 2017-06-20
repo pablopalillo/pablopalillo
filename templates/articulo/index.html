@@ -12,19 +12,14 @@
       <ul class="orbit-container">
         <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Siguiente </span>&#9664;</button>
         <button class="orbit-next" aria-label="next"><span class="show-for-sr">Anterior</span>&#9654;</button>
-
-        <li class="is-active orbit-slide">
-          <div class="banner-item">
-            <img src="{{STATIC_URL}}/img/banner.jpg" alt="planet" />
-            <figcaption class="orbit-caption">Somos Globales</figcaption>
-          </div>
-        </li>
+        {% for image in postGallery %}
         <li class="orbit-slide">
           <div class="banner-item">
-            <img src="{{STATIC_URL}}/img/banner2.jpg" alt="planet" />
-            <figcaption class="orbit-caption">Code y Coffee</figcaption>
+          <img src="{{ image.href.url }}" alt="planet" />
+            <figcaption class="orbit-caption">{{ image.title }}</figcaption>
           </div>
         </li>
+        {% endfor %}
       </ul>
   </figure>
 

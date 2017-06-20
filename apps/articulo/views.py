@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.http import Http404
 from .models import Articulo
 from .models import Meta
+from apps.multimedia.views import ArticleMultimedia
+from pprint import pprint
 
 def getArticle(request, slug):
 
@@ -18,9 +20,14 @@ def getArticle(request, slug):
                 raise Http404("Error 404, Articulo no encontrado")
             else:
                 metaArticle = getMetaData(article.id_articulo)
+                articleMultimedia = ArticleMultimedia()
+                articleMultimedia.idPost = article.id_articulo
+
+                postGallery = articleMultimedia.getImagesByType(2)
+
 
                 return render(request, "articulo/index.html",
-                    {"article":article, 'meta':metaArticle}
+                    {"article":article, 'meta':metaArticle, 'postGallery': postGallery}
                 )
 
         except Articulo.DoesNotExist:
@@ -42,7 +49,6 @@ def getMetaData(idPost):
             metaHtml = metaHtml+" "+metaText
 
     return metaHtml
-
 
 
 
