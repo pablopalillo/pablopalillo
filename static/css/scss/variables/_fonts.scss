@@ -1,0 +1,12 @@
+@font-face {
+    font-family: josefin-sans;
+    src: url(JosefinSans-Light.ttf) format('truetype');
+}
+
+$font_primary: 'josefin-sans';
+$font_secondary: Helvetica;
+$font__code: Monaco, Consolas;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+
+$font_size_primary: 14px;
+$font_size_small: 11px;
