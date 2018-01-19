@@ -10,6 +10,7 @@
     "gulp-uglyfly": "^1.4.2"
   },
   "dependencies": {
-    "gulp-css-scss": "^0.1.0"
+    "gulp-css-scss": "^0.1.0",
+    "gulp-scss": "^1.4.0"
   }
 }
