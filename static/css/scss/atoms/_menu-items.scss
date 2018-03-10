@@ -1,0 +1,7 @@
+#main-menu {
+	.menu > li, .menu > li a {
+		font-family: $font_primary;
+		font-size: $font_size_primary;
+		color: $color-reverse;
+	}
+}

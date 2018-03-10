@@ -39,3 +39,13 @@ table tr td
   font-size:  12px;
   font-family: Verdana;
 }
+
+@font-face {
+    font-family: josefin-sans;
+    src: url(JosefinSans-Light.ttf) format('truetype');
+}
+
+body, h1,h2,h3 {
+  font-family: josefin-sans;
+}
+

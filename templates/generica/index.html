@@ -1,61 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Metadata -->
-    <title>PabloPalillo | Pablo Martínez Yepes Web Page </title>
-    <link rel="stylesheet" href="{{STATIC_URL}}css/foundation.min.css" charset="utf-8">
-    <link rel="stylesheet" href="{{STATIC_URL}}css/app.css" charset="utf-8">
-  </head>
+{% extends "layouts/portfolio.html" %}
 
-  <body>
-    <div class="expanded row">
-      <div class="menu-principal">
-
-          <div class="title-bar" data-responsive-toggle="main-menu">
-            <button class="menu-icon" type="button" data-toggle></button>
-            <div class="title-bar-title">
-              <div class="pablopalillo-logo">
-                <span>PabloPalillo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="top-bar" id="main-menu">
-            <div class="top-bar-right medium-7 columns">
-              <ul class="menu small-11 medium-11 columns">
-                  <li class="small-12 medium-4 columns"><a href="#">PERFIL</a></li>
-                  <li class="small-12 medium-4 columns"><a href="#">QUIENES SOMOS</a></li>
-                  <li class="small-12 medium-4 columns"><a href="#">CONTACTENOS</a></li>
-              </ul>
-            </div>
-          </div>
-      </div>
-
-  </div>
-
-  <article id="home" style="height:100%" class="expanded row">
-
-    <section class="home-item">
-
-        <div class="small-12 large-8 large-centered columns ">
-            <h1>PABLO MARTÍNEZ YEPES</h1>
-            <h2>Web Page</h2>
-            <p>Developer</p>
-        </div>
-
-    </section>
+{% block titulo %} Home {% endblock %}
 
 
-  </article>
-
-
-
-    <script src="{{STATIC_URL}}js/vendor/jquery.js"></script>
-    <script src="{{STATIC_URL}}js/vendor/foundation.min.js"></script>
-    <script src="{{STATIC_URL}}js/app.js"></script>
-
-  </body>
-</html>
+{% block content %}
+<div class="small-12 large-8 large-centered columns ">
+    <h1>PABLO MARTÍNEZ YEPES</h1>
+    <h2>Web Page</h2>
+    <p>Developer</p>
+</div>
+{% endblock %}

@@ -1,8 +1,22 @@
 @font-face {
-    font-family: josefin-sans;
-    src: url(JosefinSans-Light.ttf) format('truetype');
-}
-
-body, h1,h2,h3 {
   font-family: josefin-sans;
-}
+  src: url(JosefinSans-Light.ttf) format("truetype"); }
+
+body,
+h1,
+h2,
+h3,
+p,
+label,
+span,
+a,
+li {
+  font-family: josefin-sans; }
+
+#main-menu .menu > li, #main-menu .menu > li a {
+  font-family: "josefin-sans";
+  font-size: 14px;
+  color: #5f5b5b; }
+
+#portafolio-page {
+  height: 100%; }
